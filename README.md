@@ -15,4 +15,3 @@ To use this project:
 1. Attach script LinearBullet or CurveBullet to bullet object.
 2. Run and See The Bullet move to target position
 3. Feel free to explore the scripts in the `Assets/Script` folder to understand how the bullet movement is implemented.
-4. Customize the scripts or integrate the bullet movement into your own Unity projects as needed.
