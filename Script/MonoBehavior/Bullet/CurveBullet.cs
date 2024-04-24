@@ -28,7 +28,10 @@ namespace App.Object
 
         protected override void UpdatePosition()
         {
-            transform.position = CalculateBezierPoint(movedTime / lifeTime, startPosition, targetPosition, offset);
+            Vector3 position = CalculateBezierPoint(movedTime / lifeTime, startPosition, targetPosition, offset);
+            Vector3 direction = position - transform.position;
+            transform.forward = direction;
+            transform.position = position;
         }
 
         private Vector3 CalculateBezierPoint(float time, Vector3 startPosition, Vector3 endPosition, Vector3 controlPoint)

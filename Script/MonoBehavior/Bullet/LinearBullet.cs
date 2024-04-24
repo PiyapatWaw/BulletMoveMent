@@ -8,7 +8,10 @@ namespace App.Object
     {
         protected override void UpdatePosition()
         {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, movedTime / lifeTime);
+            Vector3 position = Vector3.Lerp(startPosition, targetPosition, movedTime / lifeTime);
+            Vector3 direction = position - transform.position;
+            transform.forward = direction;
+            transform.position = position;
         }
     }
 }
